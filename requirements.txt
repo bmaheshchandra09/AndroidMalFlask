@@ -2,5 +2,4 @@ androguard
 flask
 pyrebase
 keras
-os
 gunicorn

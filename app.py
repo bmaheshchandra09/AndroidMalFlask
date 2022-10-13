@@ -2,7 +2,6 @@ from flask import Flask,jsonify,request
 import pyrebase
 from androguard.core.bytecodes.apk import APK
 from keras.models import load_model
-import os
 firebaseConfig = {
   "apiKey": "AIzaSyCm0G2sIx18VD1DJRndbTvuyQhmnvSpxKU",
   "authDomain": "upload-e7fac.firebaseapp.com",
@@ -41,6 +40,5 @@ def upload():
   d={}
   d['output'] = res  
   d['val']=val
-  os.remove(filename)
   return jsonify(d)
 app.run()
