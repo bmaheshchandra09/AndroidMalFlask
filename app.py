@@ -13,7 +13,7 @@ firebaseConfig = {
   "databaseURL":" "
 }
 app = Flask(__name__)
-@app.route("/",methods=['GET'])
+@app.route("/predict",methods=['GET'])
 def upload():
   filename=str(request.args['query'])
   firebase_storage=pyrebase.initialize_app(firebaseConfig)
