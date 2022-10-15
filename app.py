@@ -24,7 +24,7 @@ def upload():
   classes=['Safe','Malware']
   file=APK(filename)
   perm = file.get_permissions()
-  model=load_model('BINARY.h5',compile=False)
+  model=load_model('BINARY.h5',compile=False) 
   for d in perms:
     if d in perm:
       vector[d]=1
