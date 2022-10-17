@@ -13,9 +13,9 @@ firebaseConfig = {
   "databaseURL":" "
 }
 app = Flask(__name__)
-@app.route("/",methods=['GET'])
-def home():
-  return jsonify({"message":"success"})
+# @app.route("/",methods=['GET'])
+# def home():
+#   return jsonify({"message":"success"})
 
 
 @app.route("/predict",methods=['GET'])
@@ -46,6 +46,6 @@ def upload():
   d['output'] = res  
   d['val']=val
   return jsonify(d)
-  
+
 if __name__ == "__main__":
     app.run(debug=True)
