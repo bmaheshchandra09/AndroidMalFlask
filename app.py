@@ -13,6 +13,11 @@ firebaseConfig = {
   "databaseURL":" "
 }
 app = Flask(__name__)
+@app.route("/",methods=['GET'])
+def home():
+  return jsonify({"message":"success"})
+
+
 @app.route("/predict",methods=['GET'])
 def upload():
   filename=str(request.args['query'])
